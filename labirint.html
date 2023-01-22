@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Expires" content="Fri, Jan 01 1900 00:00:00 GMT">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="ahilespelid@gmial.com">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<title>JS labirint</title>
+<script type="text/javascript">
+function lab(tag, height=5, width=5){
+    if(null == tag && height<0 && width<0) return false; console.log(tag); 
+    tag.innerHTML = ''; tag.style.lineHeight = '16px';
+for(var line=1; line<height; line++){
+    for(var i=1;i<width;i++){var s = (Math.floor((Math.random()*2)%2)) ? "╱" : "╲"; tag.appendChild(document.createTextNode(s));} 
+    tag.appendChild(document.createElement('br'));
+}}
+document.addEventListener('DOMContentLoaded', function(){
+    lab(document.getElementById('l1'));lab(document.getElementById('l2'),12,23);lab(document.getElementById('l3'));
+});
+</script></head>
+<body style="border: 1px dotted #000; text-align: center;">
+    <div id="l1">1</div>  
+    <div id="l2">2</div>  
+    <div id="l3">3</div>  
+</body></html>
